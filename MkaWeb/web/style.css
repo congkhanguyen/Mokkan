@@ -1,0 +1,401 @@
+
+*
+{
+	margin: 0;
+	padding: 0;
+}
+
+body
+{
+	background: #F2F2F2 url(images/bg.jpg);
+	color: #3D3D3D;
+}
+
+body, input
+{
+	font-family: ‚l‚r ‚oƒSƒVƒbƒN;
+}
+
+form
+{
+	margin: 0;
+	padding: 0;
+}
+
+h1, h2, h3, h4
+{
+	text-transform: lowercase;
+}
+
+h2
+{
+	margin: 0 0 15px 0;
+	font-size: 1.5em;
+}
+
+h3
+{
+	margin: 0 0 10px 20px;
+	font-size: 1.2em;
+}
+
+h4
+{
+	margin: 0 0 5px 40px;
+	font-size: 1.0em;
+}
+
+img.left
+{
+	float: left;
+	margin: 8px 20px 20px 0;
+}
+
+img.top
+{
+	margin: 8px 0 20px 0;
+}
+
+p
+{
+	font-size: 14pt;
+	line-height: 1.75em;
+	margin-bottom: 1.5em;
+	text-align: justify;
+	font-family: "‚l‚r ‚oƒSƒVƒbƒN";
+}
+
+.form
+{
+	margin: 0 0 32px 0;
+}
+
+#box
+{
+	width: 1116px;
+	overflow: hidden;
+	margin: 0 0 12px 0;
+}
+
+#box1
+{
+	width: 240px;
+	min-height: 450px;
+	height: 575px;
+	overflow:auto;
+	float: left;
+}
+
+#box2
+{
+	width: 846px;
+	margin-left: 250px;
+	min-height: 450px;
+	border-left-style: dotted;
+	border-left-width: 1px;
+}
+
+#content
+{
+	width: 1116px;
+	min-height: 625px;
+	padding: 32px;
+	background: #FFF;
+	color: #000;
+}
+
+#content h2, #content h3, #content h4
+{
+	color: #80273f;
+}
+
+#copyright
+{
+	margin: 0 0 10px 0;
+	padding: 20px 0 20px 0;
+	text-align: center;
+	color: #80273f;
+}
+
+#header
+{
+	position: relative;
+	padding: 50px;
+	height: 30px;
+	width: 1116px;
+	color: #000;
+	top: 0px;
+	left: 0px;
+}
+
+#logo
+{
+	position: absolute;
+	top: 0;
+	left: 32px;
+	height: 30px;
+	line-height: 50px;
+	width: 1116px;
+	text-align: center;
+}
+
+#logo h1
+{
+	font-size: 2em;
+	text-align: right;
+	padding-right: 70px;
+	background-image: url(images/logo.png);
+	background-position: top left;
+	background-repeat: no-repeat;
+}
+
+#main
+{
+	position: relative;
+	height: auto;
+	width: 1180px;
+}
+
+#nav
+{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 50px;
+	line-height: 50px;
+	padding: 0 32px 0 32px;
+	width: 1116px;
+	background: #533638;
+	border-radius: 10px 10px 0 0;
+}
+
+#nav a
+{
+	font-size: 1.2em;
+	text-decoration: none;
+	text-transform: lowercase;
+	color: #fff;
+}
+
+#nav ul
+{
+	list-style: none;
+	top: 4px;
+	left: -9px;
+	margin-bottom: 1.5em;
+}
+
+#nav ul h4
+{
+	margin-bottom: 0.35em;
+}
+
+#outer
+{
+	position: relative;
+	width: 1180px;
+	margin: 30px auto 0 auto;
+	top: 0px;
+	left: 0px;
+}
+
+#tbl
+{
+	text-align: left;
+}
+
+.popHead
+{
+	color: Blue;
+	font-weight: bold;
+	text-decoration: underline;
+	line-height: 20px;
+	padding: 20px 0 10px 20px;
+}
+
+#popImg
+{
+	width:auto;
+	min-width:300px;
+	text-align:center;	
+}
+
+.popTbl tr td h3
+{
+	color:Blue;
+	margin-top:20px;
+}
+.popTbl tr td
+{
+	text-align:left;
+	width:200px;
+}
+
+.popTbl tr td a
+{	
+	font-weight:bold;
+	padding-left:10px;
+	line-height:30px;	
+}
+
+.lavaLampWithImage
+{
+	position: relative;
+	height: 30px;
+	padding: 5px 35px 5px 0px;
+	overflow: hidden;
+	float: left;
+	margin: 0 40px 0 0px;
+	width: 650px;
+}
+
+.lavaLampWithImage li
+{
+	float: left;
+	list-style: none;
+}
+
+.lavaLampWithImage li.back
+{
+	background: #03AFF7;
+	height: 40px;
+	z-index: 8;
+	position: absolute;
+}
+
+.lavaLampWithImage li a
+{
+	font: normal 120% arial, sans-serif;
+	text-decoration: none;
+	color: #FFF;
+	text-align: center;
+	letter-spacing: 0;
+	z-index: 10;
+	display: block;
+	float: left;
+	height: 50px;
+	padding: 3px 20px 3px 20px;
+	position: relative;
+	overflow: hidden;
+}
+
+.lavaLampWithImage li a:hover, .lavaLampWithImage li a:active, .lavaLampWithImage li a:visited
+{
+	border: none;
+}
+
+/* ----- Validation and error messages class starts -----*/
+.validationsummary
+{
+	margin: 15px 0 0 330px;
+	width: 30%;
+}
+.validationheader
+{
+	text-align: center;
+	font-size: 16px;
+	color: Red;
+	height: 30px;
+	font-weight: bold;
+}
+.validationsummary ul
+{
+	padding-top: 5px;
+	padding-left: 40px;
+	list-style-type: square;
+	font-size: 14px;
+	color: Blue;
+}
+/* -- --Validation and error messages class ends -- --*/
+
+/* grid view starts */
+
+#container
+{
+	width: 95%;
+	text-align: left;
+	margin-top: 20px;
+	margin-left: 20px;
+	font-size: medium;
+	font-family: "‚l‚r ‚oƒSƒVƒbƒN";
+}
+
+.mGrid
+{
+	width: 100%;
+	background-color: #fff;
+	margin: 3px 0 10px 0;
+	border: solid 1px #525252;
+	border-collapse: collapse;
+}
+.mGrid td
+{
+	padding: 1px;
+	border: solid 1px #525252;
+	color: Black;
+}
+.mGrid th
+{
+	padding: 2px 1px;
+	color: White;
+	background: #533638 url(images/grd_head.png) repeat-x top;
+	border-left: solid 1px #525252;
+	text-align: center;
+}
+.mGrid .altStyle
+{
+	background: #EFFFFF;
+}
+.mGrid .pageStyle
+{
+	background: #533638 url(images/grd_pgr.png) repeat-x top;
+}
+.mGrid .pageStyle table
+{
+	margin: 5px 0;
+}
+.mGrid .pageStyle td
+{
+	border-width: 0;
+	padding: 0 6px;
+	border-left: solid 1px #525252;
+	font-weight: bold;
+	color: White;
+	line-height: 15px;
+}
+.mGrid .pageStyle a
+{
+	color: Orange;
+	text-decoration: none;
+}
+.mGrid .pageStyle a:hover
+{
+	color: White;
+	text-decoration: none;
+}
+
+/* grid view ends */
+
+#lblRet
+{
+	margin-top: 10px;
+	color: Red;
+}
+
+.tvNode
+{
+	color: Black;
+	font-size: 0.9em;
+	padding-left: 4px;
+}
+
+.tvSelect
+{
+	color: Red;
+	background-color: #ECFFF7;
+}
+
+.tvHover
+{
+	border-bottom: 1px solid #0026FF;
+}

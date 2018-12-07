@@ -1,0 +1,574 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5DCA7740-72DF-4D52-951B-69616EAAEC17}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MokkAnnotator</RootNamespace>
+    <AssemblyName>MokkAnnotator</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <ManifestCertificateThumbprint>AAC47E45E0CC54F11C4A8B12A77E37564F48B70E</ManifestCertificateThumbprint>
+    <ManifestKeyFile>MkaAnnotator_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>true</GenerateManifests>
+    <SignManifests>false</SignManifests>
+    <StartupObject>MokkAnnotator.Program</StartupObject>
+    <Win32Resource>D:\TruyenMokkan\MokkAnnotator\MkaAnnotator\icon.res</Win32Resource>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Mysql.Data, Version=6.3.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\Mysql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WeifenLuo.WinFormsUI.Docking, Version=2.4.0.16114, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\WeifenLuo.WinFormsUI.Docking.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MkaDrawTools\MetaJouhouLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MkaDrawTools\MetaJouhouLabel.Designer.cs">
+      <DependentUpon>MetaJouhouLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MkaImageProcess\Binarization.cs" />
+    <Compile Include="MkaImageProcess\ColorConverter.cs" />
+    <Compile Include="MkaImageProcess\DoubleRange.cs" />
+    <Compile Include="MkaImageProcess\Histogram.cs" />
+    <Compile Include="MkaImageProcess\ImageAdjustment.cs" />
+    <Compile Include="MkaImageProcess\ImageRotate.cs" />
+    <Compile Include="MkaImageProcess\IntRange.cs" />
+    <Compile Include="MkaImageProcess\MokkanExtraction.cs" />
+    <Compile Include="MkaImageProcess\Statistics.cs" />
+    <Compile Include="MkaFrmNewGlass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MkaFrmNewGlass.Designer.cs">
+      <DependentUpon>MkaFrmNewGlass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MkaCommon\MkaDBConnect.cs" />
+    <Compile Include="MkaDocToolkit\DragDropManager.cs" />
+    <Compile Include="MkaDocToolkit\FileAssociation.cs" />
+    <Compile Include="MkaDocToolkit\MruManager.cs" />
+    <Compile Include="MkaDocToolkit\PersistWindowState.cs" />
+    <Compile Include="MkaDocToolkit\Xml\IXmlable.cs" />
+    <Compile Include="MkaDocToolkit\Xml\Xmlable.cs" />
+    <Compile Include="MkaDrawTools\Command.cs" />
+    <Compile Include="MkaDrawTools\CommandAdd.cs" />
+    <Compile Include="MkaDrawTools\CommandChange.cs" />
+    <Compile Include="MkaDrawTools\CommandChangeState.cs" />
+    <Compile Include="MkaDrawTools\CommandDelete.cs" />
+    <Compile Include="MkaDrawTools\CommandDeleteAll.cs" />
+    <Compile Include="MkaDrawTools\MkaDocument.cs" />
+    <Compile Include="MkaDrawTools\MkaDocument.designer.cs">
+      <DependentUpon>MkaDocument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MkaDrawTools\DrawEllipse.cs" />
+    <Compile Include="MkaDrawTools\DrawLine.cs" />
+    <Compile Include="MkaDrawTools\DrawObject.cs" />
+    <Compile Include="MkaDrawTools\DrawPolygon.cs" />
+    <Compile Include="MkaDrawTools\DrawRectangle.cs" />
+    <Compile Include="MkaImageProcess\ImageProcessing.cs" />
+    <Compile Include="MkaDrawTools\MokkanList.cs" />
+    <Compile Include="MkaImageProcess\PolygonApproximation.cs" />
+    <Compile Include="MkaFrmLoading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MkaFrmLoading.Designer.cs">
+      <DependentUpon>MkaFrmLoading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MkaFrmNewBat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MkaFrmNewBat.Designer.cs">
+      <DependentUpon>MkaFrmNewBat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MkaImageProcess\SystemTools.cs" />
+    <Compile Include="MkaImageProcess\TakakuraImplement.cs" />
+    <Compile Include="MkaToolsData\MkaBatManager.cs" />
+    <Compile Include="MkaWindow\MkaAutoExtractMokkan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MkaWindow\MkaAutoExtractMokkan.Designer.cs">
+      <DependentUpon>MkaAutoExtractMokkan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MkaWindow\MkaColorSlider.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MkaWindow\MkaMokkanDecode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MkaWindow\MkaMokkanDecode.Designer.cs">
+      <DependentUpon>MkaMokkanDecode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MkaWindow\MkaPropertiesGlass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MkaWindow\MkaPropertiesGlass.Designer.cs">
+      <DependentUpon>MkaPropertiesGlass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MkaWindow\MkaAngleSelector.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MkaWindow\MkaAngleSelector.designer.cs">
+      <DependentUpon>MkaAngleSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MkaWindow\MkaAdjustHSL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MkaWindow\MkaAdjustHSL.Designer.cs">
+      <DependentUpon>MkaAdjustHSL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MkaWindow\MkaAdjustBrightnessContrast.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MkaWindow\MkaAdjustBrightnessContrast.Designer.cs">
+      <DependentUpon>MkaAdjustBrightnessContrast.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MkaWindow\MkaImageRotate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MkaWindow\MkaImageRotate.Designer.cs">
+      <DependentUpon>MkaImageRotate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MkaWindow\MkaPrint.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MkaWindow\MkaPrint.Designer.cs">
+      <DependentUpon>MkaPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MkaDrawTools\Tool.cs" />
+    <Compile Include="MkaDrawTools\ToolEllipse.cs" />
+    <Compile Include="MkaDrawTools\ToolObject.cs" />
+    <Compile Include="MkaDrawTools\ToolPointer.cs" />
+    <Compile Include="MkaDrawTools\ToolPolygon.cs" />
+    <Compile Include="MkaDrawTools\ToolRectangle.cs" />
+    <Compile Include="MkaWindow\MkaColorDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MkaWindow\MkaGraphicsProperties.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MkaWindow\MkaGraphicsProperties.Designer.cs">
+      <DependentUpon>MkaGraphicsProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MkaDrawTools\UndoManager.cs" />
+    <Compile Include="MkaCommon\MkaDefine.cs" />
+    <Compile Include="MkaFrmSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MkaFrmSearch.Designer.cs">
+      <DependentUpon>MkaFrmSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MkaCommon\MkaMessage.cs" />
+    <Compile Include="MkaDrawTools\GraphicsProperties.cs" />
+    <Compile Include="MkaFrmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MkaFrmAbout.designer.cs">
+      <DependentUpon>MkaFrmAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MkaFrmAnnotator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MkaFrmAnnotator.Designer.cs">
+      <DependentUpon>MkaFrmAnnotator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MkaCommon\MkaEnumType.cs" />
+    <Compile Include="MkaToolsData\MkaGlassInfo.cs" />
+    <Compile Include="MkaToolsData\MkaMokkanInfo.cs" />
+    <Compile Include="MkaToolsData\MkaBatInfo.cs" />
+    <Compile Include="MkaWindow\MkaColorButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MkaWindow\MkaPropertiesBat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MkaWindow\MkaPropertiesBat.Designer.cs">
+      <DependentUpon>MkaPropertiesBat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MkaWindow\MkaPropertiesMokkan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MkaWindow\MkaPropertiesMokkan.designer.cs">
+      <DependentUpon>MkaPropertiesMokkan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MkaWindow\MkaToolStripSystemRenderer.cs" />
+    <Compile Include="MkaWindow\MkaWndExplorer.cs" />
+    <Compile Include="MkaWindow\MkaWndExplorer.Designer.cs">
+      <DependentUpon>MkaWndExplorer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MkaWindow\MkaWndSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MkaWindow\MkaWndSettings.Designer.cs">
+      <DependentUpon>MkaWndSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MkaWindow\MkaWndToolbar.cs" />
+    <Compile Include="MkaWindow\MkaWndToolbar.Designer.cs">
+      <DependentUpon>MkaWndToolbar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MkaWindow\NumbersOnlyTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="MkaDrawTools\MetaJouhouLabel.resx">
+      <DependentUpon>MetaJouhouLabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MkaFrmNewGlass.resx">
+      <DependentUpon>MkaFrmNewGlass.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MkaDrawTools\MkaDocument.resx">
+      <DependentUpon>MkaDocument.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MkaFrmLoading.resx">
+      <DependentUpon>MkaFrmLoading.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MkaFrmNewBat.resx">
+      <DependentUpon>MkaFrmNewBat.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MkaWindow\MkaAutoExtractMokkan.resx">
+      <DependentUpon>MkaAutoExtractMokkan.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MkaWindow\MkaMokkanDecode.resx">
+      <DependentUpon>MkaMokkanDecode.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MkaWindow\MkaPropertiesGlass.resx">
+      <DependentUpon>MkaPropertiesGlass.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MkaWindow\MkaAngleSelector.resx">
+      <DependentUpon>MkaAngleSelector.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MkaWindow\MkaAdjustHSL.resx">
+      <DependentUpon>MkaAdjustHSL.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MkaWindow\MkaAdjustBrightnessContrast.resx">
+      <DependentUpon>MkaAdjustBrightnessContrast.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MkaWindow\MkaImageRotate.resx">
+      <DependentUpon>MkaImageRotate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MkaWindow\MkaPrint.resx">
+      <DependentUpon>MkaPrint.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MkaWindow\MkaColorDialog.resx">
+      <DependentUpon>MkaColorDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MkaWindow\MkaGraphicsProperties.resx">
+      <DependentUpon>MkaGraphicsProperties.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MkaFrmAbout.resx">
+      <DependentUpon>MkaFrmAbout.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MkaFrmAnnotator.resx">
+      <DependentUpon>MkaFrmAnnotator.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MkaFrmSearch.resx">
+      <DependentUpon>MkaFrmSearch.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MkaWindow\MkaPropertiesBat.resx">
+      <DependentUpon>MkaPropertiesBat.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MkaWindow\MkaPropertiesMokkan.resx">
+      <DependentUpon>MkaPropertiesMokkan.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MkaWindow\MkaWndExplorer.resx">
+      <DependentUpon>MkaWndExplorer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MkaWindow\MkaWndSettings.resx">
+      <DependentUpon>MkaWndSettings.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MkaWindow\MkaWndToolbar.resx">
+      <DependentUpon>MkaWndToolbar.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MkaWindow\MkaWndMokkan.resx">
+      <DependentUpon>MkaWndMokkan.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MkaWindow\MkaWndProperty.resx">
+      <DependentUpon>MkaWndProperty.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config" />
+    <None Include="icon.res" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="MkaWindow\MkaWndMokkan.cs" />
+    <Compile Include="MkaWindow\MkaWndMokkan.Designer.cs">
+      <DependentUpon>MkaWndMokkan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MkaWindow\MkaWndProperty.cs" />
+    <Compile Include="MkaWindow\MkaWndProperty.Designer.cs">
+      <DependentUpon>MkaWndProperty.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app.ico" />
+    <None Include="img\Polygon.cur" />
+    <None Include="img\background.jpg" />
+    <None Include="img\file_saveall.png" />
+    <None Include="img\file_export.png" />
+    <None Include="img\file_csv.png" />
+    <None Include="img\file_exit.png" />
+    <None Include="img\project_new.png" />
+    <None Include="img\dialogclose.png" />
+    <None Include="img\project_open.png" />
+    <None Include="img\project_close.png" />
+    <None Include="img\view_forward.png" />
+    <None Include="img\view_backward.png" />
+    <None Include="img\file_close.png" />
+    <None Include="img\edit_properties.png" />
+    <Content Include="bmk.ico" />
+    <None Include="img\explorer.png" />
+    <None Include="img\imagecontrast.png" />
+    <None Include="img\imagehsl.png" />
+    <None Include="img\imageoriginal.png" />
+    <None Include="img\rotate.png" />
+    <None Include="img\rotate180.png" />
+    <None Include="img\rotateflip.png" />
+    <None Include="img\rotateleft.png" />
+    <None Include="img\rotatemirror.png" />
+    <None Include="img\rotateright.png" />
+    <None Include="img\back.png" />
+    <None Include="img\forward.png" />
+    <None Include="img\arrow_right.png" />
+    <None Include="img\explorerlist.png" />
+    <None Include="img\exploreroutline.png" />
+    <Content Include="img\mokkandecode.ico" />
+    <Content Include="img\mokkandecode.png" />
+    <Content Include="mkg.ico" />
+    <Content Include="img\annotationbar.ico" />
+    <Content Include="img\annotationbar.png" />
+    <Content Include="img\autolabel.png" />
+    <Content Include="img\autoselect.png" />
+    <Content Include="img\configure.png" />
+    <Content Include="img\draw_cursor.png" />
+    <Content Include="img\draw_ellipse.png" />
+    <Content Include="img\draw_polygon.png" />
+    <Content Include="img\draw_rectangle.png" />
+    <Content Include="img\edit_copy.png" />
+    <Content Include="img\edit_cut.png" />
+    <Content Include="img\edit_delete.png" />
+    <Content Include="img\edit_delselect.png" />
+    <Content Include="img\edit_paste.png" />
+    <Content Include="img\edit_redo.png" />
+    <Content Include="img\edit_select.png" />
+    <Content Include="img\edit_selecteddel.png" />
+    <Content Include="img\edit_undo.png" />
+    <Content Include="img\Ellipse.cur" />
+    <Content Include="img\file_new.png" />
+    <Content Include="img\file_open.png" />
+    <Content Include="img\file_page.png" />
+    <Content Include="img\file_preview.png" />
+    <Content Include="img\file_print.png" />
+    <Content Include="img\file_save.png" />
+    <Content Include="img\fillcolor.png" />
+    <Content Include="img\filltransparent.png" />
+    <Content Include="img\help.png" />
+    <Content Include="img\help_info.png" />
+    <Content Include="img\help_shortcut.png" />
+    <Content Include="img\linecolor.png" />
+    <Content Include="img\lineweight.png" />
+    <Content Include="img\nodechildedit.png" />
+    <Content Include="img\property.ico" />
+    <Content Include="img\property.png" />
+    <Content Include="img\Rectangle.cur" />
+    <Content Include="img\search.ico" />
+    <Content Include="img\search.png" />
+    <Content Include="img\view_all.png" />
+    <Content Include="img\view_image.png" />
+    <Content Include="img\view_rid.png" />
+    <Content Include="img\view_xml.png" />
+    <Content Include="img\view_zoom100.png" />
+    <Content Include="img\view_zoomin.png" />
+    <Content Include="img\view_zoomout.png" />
+    <Content Include="img\view_zoomwindow.png" />
+    <Content Include="img\window_list.ico" />
+    <Content Include="img\window_list.png" />
+    <None Include="Resources\arrow.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <Private>True</Private>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <Private>True</Private>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,4 @@
+D:\TruyenMokkan\MokkAnnotator\MkaUninstall\bin\Release\Uninstall.exe
+D:\TruyenMokkan\MokkAnnotator\MkaUninstall\bin\Release\Uninstall.pdb
+D:\TruyenMokkan\MokkAnnotator\MkaUninstall\obj\Release\Uninstall.exe
+D:\TruyenMokkan\MokkAnnotator\MkaUninstall\obj\Release\Uninstall.pdb

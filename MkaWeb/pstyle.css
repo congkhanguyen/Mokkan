@@ -1,0 +1,33 @@
+.popHead
+{
+	color: Blue;
+	font-weight: bold;
+	text-decoration: underline;
+	line-height: 20px;
+	padding: 20px 0 10px 20px;
+}
+
+#popImg
+{
+	width:auto;
+	min-width:300px;
+	text-align:center;	
+}
+
+.popTbl tr td h3
+{
+	color:Blue;
+	margin-top:20px;
+}
+.popTbl tr td
+{
+	text-align:left;
+	width:200px;
+}
+
+.popTbl tr td a
+{	
+	font-weight:bold;
+	padding-left:10px;
+	line-height:30px;	
+}

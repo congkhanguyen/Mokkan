@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "MkaSetup", "MkaSetup\MkaSetup.vdproj", "{B47AF62F-549A-4BD6-9ECB-17D7518358C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MkaAnnotator", "MkaAnnotator\MkaAnnotator.csproj", "{5DCA7740-72DF-4D52-951B-69616EAAEC17}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MkaUninstall", "MkaUninstall\MkaUninstall.csproj", "{15447CBE-D8DD-4901-9DC2-7D1FC81B882C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MkaWeb", "MkaWeb\MkaWeb.csproj", "{71410D93-3EB1-4897-B64F-3A6E538A5B91}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MkaAutoUpdate", "MkaAutoUpdate\MkaAutoUpdate.csproj", "{79B2E375-17F6-4325-B44B-4FABAD2D5A98}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B47AF62F-549A-4BD6-9ECB-17D7518358C8}.Debug|Any CPU.ActiveCfg = Debug
+		{B47AF62F-549A-4BD6-9ECB-17D7518358C8}.Debug|Any CPU.Build.0 = Debug
+		{B47AF62F-549A-4BD6-9ECB-17D7518358C8}.Release|Any CPU.ActiveCfg = Release
+		{B47AF62F-549A-4BD6-9ECB-17D7518358C8}.Release|Any CPU.Build.0 = Release
+		{5DCA7740-72DF-4D52-951B-69616EAAEC17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DCA7740-72DF-4D52-951B-69616EAAEC17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DCA7740-72DF-4D52-951B-69616EAAEC17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DCA7740-72DF-4D52-951B-69616EAAEC17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15447CBE-D8DD-4901-9DC2-7D1FC81B882C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15447CBE-D8DD-4901-9DC2-7D1FC81B882C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15447CBE-D8DD-4901-9DC2-7D1FC81B882C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15447CBE-D8DD-4901-9DC2-7D1FC81B882C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71410D93-3EB1-4897-B64F-3A6E538A5B91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71410D93-3EB1-4897-B64F-3A6E538A5B91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71410D93-3EB1-4897-B64F-3A6E538A5B91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71410D93-3EB1-4897-B64F-3A6E538A5B91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79B2E375-17F6-4325-B44B-4FABAD2D5A98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79B2E375-17F6-4325-B44B-4FABAD2D5A98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79B2E375-17F6-4325-B44B-4FABAD2D5A98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79B2E375-17F6-4325-B44B-4FABAD2D5A98}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+EndGlobal
